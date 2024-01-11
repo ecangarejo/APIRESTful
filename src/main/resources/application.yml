@@ -1,0 +1,89 @@
+spring:
+  profiles:
+    active: dev
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    password: root
+    url: jdbc:postgresql://localhost:5432/restfulapi
+    username: postgres
+  jpa:
+    database: POSTGRESQL
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  sql:
+    init:
+      platform: postgres
+
+---
+
+#spring:
+  #mvc:
+    #pathmatc:
+      #matching-strategy: ant-path-matcher
+  #config:
+    #activate:
+      #on-profile: dev
+  #datasource:
+    #password: root
+    #url: jdbc:mysql://localhost:3306/rest_api_db
+    #username: root
+  #jpa:
+    #database-platform: org.hibernate.dialect.MySQLDialect
+    #hibernate:
+      #ddl-auto: update
+    #properties:
+      #hibernate:
+        #format_sql: true
+    #show-sql: true
+
+#---
+
+#spring:
+  #config:
+    #activate:
+      #on-profile: qa
+  #datasource:
+    #password: root
+    #url: jdbc:mysql://localhost:3306/rest_api_db_qa
+    #username: root
+  #jpa:
+    #database-platform: org.hibernate.dialect.MySQLDialect
+    #hibernate:
+      #ddl-auto: update
+    #properties:
+      #hibernate:
+        #format_sql: true
+    #show-sql: true
+
+#---
+
+#spring:
+  #config:
+    #activate:
+      #on-profile: pro
+  #datasource:
+    #password: root
+    #url: jdbc:mysql://localhost:3306/rest_api_db_pro
+    #username: root
+  #jpa:
+    #database-platform: org.hibernate.dialect.MySQLDialect
+    #hibernate:
+      #ddl-auto: update
+    #properties:
+      #hibernate:
+        #format_sql: true
+    #show-sql: true
+
+---
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui-custom.html
