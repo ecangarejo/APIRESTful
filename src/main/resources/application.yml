@@ -87,3 +87,4 @@ spring:
 springdoc:
   swagger-ui:
     path: /swagger-ui-custom.html
+  enable-spring-security: false
